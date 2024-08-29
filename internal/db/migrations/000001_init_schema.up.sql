@@ -1,5 +1,5 @@
 -- Active: 1704206189076@@127.0.0.1@5432
-CREATE TABLE "account" (
+CREATE TABLE "accounts" (
     "id" bigserial PRIMARY KEY,
     "owner" varchar NOT NULL,
     "balance" bigint NOT NULL,

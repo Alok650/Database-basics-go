@@ -1,0 +1,12 @@
+version: "2"
+sql:
+  - engine: "postgresql"
+    schema: "./internal/db/migrations/000001_init_schema.up.sql"
+    queries:
+      - "./internal/db/queries/accounts.sql"
+      - "./internal/db/queries/entries.sql"
+      - "./internal/db/queries/transfers.sql"
+    gen:
+      go:
+        package: "db"
+        out: "./internal/db/sqlc"
